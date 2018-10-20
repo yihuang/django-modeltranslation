@@ -435,6 +435,8 @@ var google, django, gettext;
                     });
                 });
             });
+
+            $('ul.ui-tabs-nav').hide();
         }
     });
 }());
