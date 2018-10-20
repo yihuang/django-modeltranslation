@@ -371,6 +371,7 @@ class TabbedDjango15JqueryTranslationAdmin(TranslationAdmin):
             'modeltranslation/js/force_jquery.js',
             '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
+            'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',
         )
         css = {
@@ -388,6 +389,7 @@ class TabbedDjangoJqueryTranslationAdmin(TranslationAdmin):
             'modeltranslation/js/force_jquery.js',
             '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
+            'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',
         )
         css = {
@@ -405,6 +407,7 @@ class TabbedExternalJqueryTranslationAdmin(TranslationAdmin):
             '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
             '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
+            'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',
         )
         css = {

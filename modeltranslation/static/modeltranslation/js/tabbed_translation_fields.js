@@ -345,6 +345,20 @@ var google, django, gettext;
             return tabs;
         }
 
+        function showLanguageCode(lang) {
+            lang = lang.replace('_', '-');
+            var info = django.isoLangs[lang]
+            if (!info) {
+                return lang;
+            }
+            else {
+                while (info.fallback) {
+                    info = django.isoLangs[info.fallback[0]];
+                }
+                return info.name + '(' + info.name_local + ')';
+            }
+        }
+
         var MainSwitch = {
             languages: [],
             $select: $('<select>'),
@@ -360,7 +374,7 @@ var google, django, gettext;
                 });
                 $.each(this.languages, function (idx, language) {
                     self.$select.append($('<option value="' + idx + '">' +
-                                        language.replace('_', '-') + '</option>'));
+                                        showLanguageCode(language) + '</option>'));
                 });
                 this.update(tabs);
                 $('#content').find('h1').append('&nbsp;').append(self.$select);
