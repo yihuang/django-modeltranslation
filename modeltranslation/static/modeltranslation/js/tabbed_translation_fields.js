@@ -127,6 +127,15 @@ var google, django, gettext;
                 var self = this,
                     cssPrefix = TranslationField.cssPrefix;
                 this.$fields.each(function (idx, el) {
+
+                    // handle inline form layout (not inline model).
+                    var container = $(el).closest('.form-row');
+                    var firstChild = container.children().eq(0);
+                    if (firstChild.hasClass('fieldBox') &&
+                        !$.contains(firstChild[0], el)) {
+                        return;
+                    }
+
                     $.each($(el).attr('class').split(' '), function(idx, cls) {
                         if (cls.substring(0, cssPrefix.length) === cssPrefix) {
                             var tfield = new TranslationField({el: el, cls: cls});

@@ -151,10 +151,14 @@ class TranslationBaseModelAdmin(BaseModelAdmin):
                 if opt in self.trans_opts.fields:
                     index = option_new.index(opt)
                     option_new[index:index + 1] = get_translation_fields(opt)
-                elif isinstance(opt, (tuple, list)) and (
-                        [o for o in opt if o in self.trans_opts.fields]):
-                    index = option_new.index(opt)
-                    option_new[index:index + 1] = self.replace_orig_field(opt)
+                elif isinstance(opt, (tuple, list)):
+                    trans = [o for o in opt if o in self.trans_opts.fields]
+                    if trans:
+                        index = option_new.index(opt)
+                        if len(trans) == len(opt):
+                            option_new[index:index + 1] = zip(*(get_translation_fields(f) for f in opt))
+                        else:
+                            option_new[index:index + 1] = self.replace_orig_field(opt)
             option = option_new
         return option
 
