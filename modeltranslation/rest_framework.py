@@ -10,5 +10,6 @@ class TranslatableModelSerializer(serializers.ModelSerializer):
             list(declared_fields) +
             [name for name, f in model_info.fields.items()
              if not isinstance(f, TranslationField)] +
-            list(model_info.forward_relations)
+            [name for name, rel in model_info.forward_relations.items()
+             if not isinstance(rel.model_field, TranslationField)]
         )
