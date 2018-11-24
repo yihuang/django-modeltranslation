@@ -374,7 +374,7 @@ class TabbedDjango15JqueryTranslationAdmin(TranslationAdmin):
     class Media:
         js = (
             'modeltranslation/js/force_jquery.js',
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.8.2/jquery-ui.min.js',
+            'modeltranslation/js/libs/jqueryui/1.8.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
             'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',
@@ -392,7 +392,7 @@ class TabbedDjangoJqueryTranslationAdmin(TranslationAdmin):
     class Media:
         js = (
             'modeltranslation/js/force_jquery.js',
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
+            'modeltranslation/js/libs/jqueryui/1.11.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
             'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',
@@ -409,8 +409,8 @@ class TabbedExternalJqueryTranslationAdmin(TranslationAdmin):
     """
     class Media:
         js = (
-            '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
-            '//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js',
+            'modeltranslation/js/libs/jquery/1.11.1/jquery.min.js',
+            'modeltranslation/js/libs/jqueryui/1.11.2/jquery-ui.min.js',
             '//cdn.jsdelivr.net/jquery.mb.browser/0.1/jquery.mb.browser.min.js',
             'modeltranslation/js/language_codes.js',
             'modeltranslation/js/tabbed_translation_fields.js',

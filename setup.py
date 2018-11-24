@@ -24,7 +24,8 @@ setup(
     packages=['modeltranslation', 'modeltranslation.management',
               'modeltranslation.management.commands'],
     package_data={'modeltranslation': ['static/modeltranslation/css/*.css',
-                                       'static/modeltranslation/js/*.js']},
+                                       'static/modeltranslation/js/*.js',
+                                       'static/modeltranslation/js/libs/*/*/*.js']},
     requires=['Django(>=1.11)'],
     download_url='https://github.com/deschler/django-modeltranslation/archive/%s.tar.gz' % version,
     classifiers=[
